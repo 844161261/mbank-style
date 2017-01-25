@@ -1,5 +1,9 @@
 # mobile bank 样式项目
 
+## 2017-1-25
+- 增加livereload,修改css后无需刷新测试页面
+- 预览地址[http://localhost:9999/](http://localhost:9999/)
+
 ## 2017-1-24
 - 完成样式项目,文件结构: mbank.css做样式入口文件, 将变量和公共组件的样式放入`include`目录中管理
 - 使用git管理代码
