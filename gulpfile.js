@@ -3,13 +3,18 @@ var less = require('gulp-less');
 var path = require('path');
 
 var LessAutoprefix = require('less-plugin-autoprefix');
-var autoprefix = new LessAutoprefix({ browsers: ['last 2 versions'] });
+var autoprefix = new LessAutoprefix({ browsers: ['last 2 versions','Android >= 4.0'],cascade: true });
+
 
 gulp.task('less', function () {
-  return gulp.src('./less/mbank.less')
+
+    gulp.watch('./less/**/*.less', ['less']);
+
+    return gulp.src('./less/mbank.less')
     .pipe(less({
       paths: [ path.join(__dirname, 'less', 'include') ],
       plugins: [autoprefix]
     }))
     .pipe(gulp.dest('./public/css'));
 });
+
