@@ -6,7 +6,7 @@ var LessAutoprefix = require('less-plugin-autoprefix');
 var autoprefix = new LessAutoprefix({ browsers: ['last 2 versions'] });
 
 gulp.task('less', function () {
-  return gulp.src('./less/**/*.less')
+  return gulp.src('./less/mbank.less')
     .pipe(less({
       paths: [ path.join(__dirname, 'less', 'include') ],
       plugins: [autoprefix]
